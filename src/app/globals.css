@@ -22,13 +22,23 @@ html {
   scroll-behavior: smooth;
   background: var(--bg);
   color: var(--text);
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
   font-family: var(--font-dm-sans), sans-serif;
   background: var(--bg);
+  width: 100%;
+  max-width: 100%;
   overflow-x: hidden;
-  cursor: none;
+}
+
+@media (pointer: fine) {
+  body {
+    cursor: none;
+  }
 }
 
 a:focus-visible,
@@ -49,6 +59,12 @@ button:focus-visible {
   z-index: 9999;
   transition: transform 0.15s ease, background 0.2s ease;
   mix-blend-mode: screen;
+}
+
+@media (pointer: coarse) {
+  .cursor {
+    display: none;
+  }
 }
 
 ::-webkit-scrollbar {

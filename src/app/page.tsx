@@ -17,6 +17,8 @@ export default function Home() {
   useSmoothScroll();
 
   useEffect(() => {
+    if (window.matchMedia("(pointer: coarse)").matches) return;
+
     const cursor = document.createElement("div");
     cursor.className = "cursor";
     document.body.appendChild(cursor);
@@ -38,7 +40,7 @@ export default function Home() {
       {loaded && (
         <>
           <Navbar />
-          <main>
+          <main className="w-full overflow-x-clip">
             <Hero />
             <About />
             <Experience />

@@ -57,13 +57,13 @@ export default function Navbar() {
         initial={false}
         animate={{ x: open ? 0 : "100%" }}
         transition={{ duration: 0.35, ease: [0.76, 0, 0.24, 1] }}
-        className="fixed inset-0 z-[90] flex items-center justify-center bg-bg md:hidden"
+        className="fixed inset-0 z-[90] flex items-center justify-center overflow-x-hidden bg-bg px-5 md:hidden"
       >
         <div className="flex flex-col items-center gap-5">
           {links.map((link) => (
             <button
               key={link.id}
-              className="font-display text-5xl font-bold text-text"
+              className="max-w-full text-center font-display text-[clamp(2rem,11vw,3rem)] font-bold text-text"
               onClick={() => scrollToSection(link.id, () => setOpen(false))}
             >
               {link.label}

@@ -40,7 +40,7 @@ export default function Projects() {
           <a
             key={project.title}
             href={project.link}
-            className="group relative min-h-[280px] aspect-video border border-border bg-surface p-6 transition hover:-translate-y-1 hover:border-accent"
+            className="group relative aspect-video min-h-[280px] overflow-hidden border border-border bg-surface p-5 transition hover:-translate-y-1 hover:border-accent sm:p-6"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -50,9 +50,9 @@ export default function Projects() {
               </span>
               <ArrowUpRight className="translate-x-2 -translate-y-2 opacity-0 transition group-hover:translate-x-0 group-hover:translate-y-0 group-hover:opacity-100" size={18} />
             </div>
-            <div className="absolute bottom-6 left-6 right-6">
+            <div className="absolute bottom-5 left-5 right-5 sm:bottom-6 sm:left-6 sm:right-6">
               <p className="mb-3 font-mono text-[11px] tracking-[0.12em] text-muted">{project.status}</p>
-              <h3 className="font-display text-3xl font-bold text-text">{project.title}</h3>
+              <h3 className="font-display text-2xl font-bold text-text sm:text-3xl">{project.title}</h3>
               <div className="mt-3 flex flex-wrap gap-2">
                 {project.tags.map((tag) => (
                   <span key={tag} className="rounded border border-border px-2 py-1 font-mono text-[10px] text-muted">
